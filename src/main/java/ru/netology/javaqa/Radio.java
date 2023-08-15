@@ -13,17 +13,21 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentStation == 9)
+        if (currentStation == 9) {
             currentStation = 0;
-        else
+        }
+        else {
             currentStation++;
+        }
     }
 
     public void prevStation() {
-        if (currentStation == 0)
+        if (currentStation == 0) {
             currentStation = 9;
-        else
+        }
+        else {
             currentStation--;
+        }
     }
 
     public void setCurrentStation (int newStation) {
@@ -43,7 +47,7 @@ public class Radio {
         }
     }
 
-    void setCurrentVolume(int newVolume) {  //И так сойдёт
-        currentVolume = newVolume;
+    void setCurrentVolume(int newVolume) {
+        currentVolume = newVolume;  //И так сойдёт
     }
 }
