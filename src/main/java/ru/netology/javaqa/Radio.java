@@ -1,19 +1,23 @@
 package ru.netology.javaqa;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+
 public class Radio {
 
     private int currentVolume;
     private int currentStation;
+    private int stationsAmount = 10;
 
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public int getCurrentStation() {
-        return currentStation;
+    public Radio(int stationsAmount) {
+        this.stationsAmount = stationsAmount;
     }
 
     public void nextStation() {
-        if (currentStation == 9) {
+        if (currentStation == (stationsAmount - 1)) {
             currentStation = 0;
         }
         else {
@@ -23,7 +27,7 @@ public class Radio {
 
     public void prevStation() {
         if (currentStation == 0) {
-            currentStation = 9;
+            currentStation = stationsAmount - 1;
         }
         else {
             currentStation--;
@@ -31,7 +35,7 @@ public class Radio {
     }
 
     public void setCurrentStation (int newStation) {
-        if ((newStation >= 0) && (newStation <= 9)) {
+        if ((newStation >= 0) && (newStation <= (stationsAmount - 1))) {
             currentStation = newStation;
         }
     }
