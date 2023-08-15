@@ -1,26 +1,19 @@
 package ru.netology.javaqa;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor
+
 public class Radio {
 
     private int currentVolume;
     private int currentStation;
-    private int stationsAmount;
-
-    public Radio() {
-        stationsAmount = 10;
-    }
+    private int stationsAmount = 10;
 
     public Radio(int stationsAmount) {
         this.stationsAmount = stationsAmount;
-    }
-
-    public int getStationsAmount() { return stationsAmount; }
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public int getCurrentStation() {
-        return currentStation;
     }
 
     public void nextStation() {
