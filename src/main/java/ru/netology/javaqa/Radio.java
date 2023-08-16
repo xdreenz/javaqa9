@@ -14,7 +14,9 @@ public class Radio {
         this.stationsAmount = stationsAmount;
     }
 
-    public int getStationsAmount() { return stationsAmount; }
+    public int getStationsAmount() {
+        return stationsAmount;
+    }
 
     public int getCurrentVolume() {
         return currentVolume;
