@@ -1,4 +1,5 @@
 package ru.netology.javaqa;
+
 public class Radio {
 
     private int currentVolume;
@@ -26,8 +27,7 @@ public class Radio {
     public void nextStation() {
         if (currentStation == (stationsAmount - 1)) {
             currentStation = 0;
-        }
-        else {
+        } else {
             currentStation++;
         }
     }
@@ -35,17 +35,17 @@ public class Radio {
     public void prevStation() {
         if (currentStation == 0) {
             currentStation = stationsAmount - 1;
-        }
-        else {
+        } else {
             currentStation--;
         }
     }
 
-    public void setCurrentStation (int newStation) {
+    public void setCurrentStation(int newStation) {
         if ((newStation >= 0) && (newStation <= (stationsAmount - 1))) {
             currentStation = newStation;
         }
     }
+
     public void increaseVolume() {
         if (currentVolume < 100) {
             currentVolume++;
@@ -59,6 +59,6 @@ public class Radio {
     }
 
     void setCurrentVolume(int newVolume) {
-        currentVolume = newVolume;  //И так сойдёт
+        currentVolume = newVolume;
     }
 }
